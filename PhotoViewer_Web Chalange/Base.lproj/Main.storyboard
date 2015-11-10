@@ -22,6 +22,32 @@
             </objects>
             <point key="canvasLocation" x="11" y="382"/>
         </scene>
+        <!--NSShowController-->
+        <scene sceneID="KIp-BH-OQm">
+            <objects>
+                <viewController storyboardIdentifier="NSShowController" title="NSShowController" id="1aa-pr-7Hg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JzG-jE-BUO"/>
+                        <viewControllerLayoutGuide type="bottom" id="fZG-KM-tKQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6NY-ja-RVa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-uX-evD">
+                                <rect key="frame" x="0.0" y="20" width="320" height="447"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyx-l0-tFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="392" y="-249"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="KJo-yO-HQo">
             <objects>
@@ -34,24 +60,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-NU-KTk">
-                                <rect key="frame" x="114" y="220" width="93" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjC-qf-stS">
+                                <rect key="frame" x="139" y="7" width="42" height="21"/>
                                 <animations/>
-                                <state key="normal" title="Upload photo"/>
-                                <connections>
-                                    <action selector="uploadPhoto:" destination="ueO-fh-bzl" eventType="touchUpInside" id="YVy-7M-N6X"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-ku-iJG">
-                                <rect key="frame" x="40" y="299" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <animations/>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Bcl-eC-0BG"/>
+                    <navigationItem key="navigationItem" id="Bcl-eC-0BG">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Upload Photo" id="Rgv-1b-r6A">
+                            <connections>
+                                <action selector="uploadPhoto:" destination="ueO-fh-bzl" id="EYu-i2-jZH"/>
+                            </connections>
+                        </barButtonItem>
+                        <switch key="titleView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="cpd-lZ-pnJ">
+                            <rect key="frame" x="135" y="7" width="51" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <connections>
+                                <action selector="changeMode:" destination="ueO-fh-bzl" eventType="valueChanged" id="XUT-Ib-Rto"/>
+                            </connections>
+                        </switch>
+                    </navigationItem>
                     <connections>
+                        <outlet property="UploadButton" destination="Rgv-1b-r6A" id="y7T-kp-x0U"/>
+                        <outlet property="editMode" destination="cpd-lZ-pnJ" id="flM-9t-qtc"/>
                         <outlet property="photo" destination="V7b-ku-iJG" id="Pno-ZM-xi1"/>
                     </connections>
                 </viewController>
