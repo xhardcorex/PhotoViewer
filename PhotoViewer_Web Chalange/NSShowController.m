@@ -9,29 +9,69 @@
 #import "NSShowController.h"
 
 @interface NSShowController ()
-
 @end
 
 @implementation NSShowController
 
+- (void) sendData:(NSDataFromMVC *)data{
+    
+    NSLog(@"delegate");
+    self.data = data;
+     
+    
+}
+- (void) loadPhoto{
+
+    NSPhotoController* pc = [self.storyboard instantiateViewControllerWithIdentifier:@"NSPhotoController"];
+    self.delegate = pc;
+    
+    if (self.count == 1) {
+        [self.delegate sendBackground:[self.data.arrayWithPhoto objectAtIndex:self.count ]];
+        [self.navigationController pushViewController:pc animated:YES];
+        self.count++;
+
+    }else if(self.count == 2){
+        [self.delegate sendBackground:[self.data.arrayWithPhoto objectAtIndex:self.count ]];
+        [self.navigationController pushViewController:pc animated:YES];
+self.count++;
+        self.count = 0;
+        
+    }else if (self.count == 0){
+        
+        [self.delegate sendBackground:[self.data.arrayWithPhoto objectAtIndex:self.count ]];
+        [self.navigationController pushViewController:pc animated:YES];
+        self.count++;
+    }
+  }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.count = 0;
     // Do any additional setup after loading the view.
+    
+    if (self.data.backgroundImage ) {
+        NSLog(@"YES");
+    }else{
+        NSLog(@"NO");
+        
+    }
+    
+    NSLog(@"count:%d",[self.data.arrayViews count]);
+    
+    self.background.image = self.data.backgroundImage;
+    
+    for (UIView* view in self.data.arrayViews) {
+        view.backgroundColor = [UIColor greenColor];
+        UITapGestureRecognizer* gr = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(loadPhoto)];
+        [view addGestureRecognizer:gr];
+        [self.view addSubview:view];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -9,5 +9,13 @@
 #import "NSDataFromMVC.h"
 
 @implementation NSDataFromMVC
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.arrayViews = [NSMutableArray array];
+        self.arrayWithPhoto = [NSMutableArray array];
+    }
+    return self;
+}
 @end

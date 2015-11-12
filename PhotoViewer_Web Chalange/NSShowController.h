@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "sendDataFromMainController.h"
+#import "NSDataFromMVC.h"
+#import "NSPhotoController.h"
+@interface NSShowController : UIViewController <sendDataFromMainController,UIImagePickerControllerDelegate,UIGestureRecognizerDelegate>
 
-@interface NSShowController : UIViewController
+@property (strong,nonatomic) NSDataFromMVC* data;
+@property (weak, nonatomic) IBOutlet UIImageView *background;
+@property (weak,nonatomic) id<sendDataFromMainController> delegate;
+@property (weak,nonatomic) UIView* viewBack;
+@property (assign,nonatomic) NSInteger count;
 
 @end

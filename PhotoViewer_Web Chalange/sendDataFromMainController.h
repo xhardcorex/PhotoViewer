@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSDataFromMVC.h"
 
 @protocol sendDataFromMainController <NSObject>
 
-- (void) 
+- (void) sendData:(NSDataFromMVC*) data;
+- (void) sendBackground:(UIImage*) image;
 @end

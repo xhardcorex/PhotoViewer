@@ -15,6 +15,7 @@
 		241097571BF1F42200E4F33F /* NSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241097561BF1F42200E4F33F /* NSMainViewController.m */; settings = {ASSET_TAGS = (); }; };
 		24D8EE5B1BF2225500988AA0 /* NSShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D8EE5A1BF2225500988AA0 /* NSShowController.m */; settings = {ASSET_TAGS = (); }; };
 		24D8EE5F1BF223BB00988AA0 /* NSDataFromMVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D8EE5E1BF223BB00988AA0 /* NSDataFromMVC.m */; settings = {ASSET_TAGS = (); }; };
+		24D8EE621BF23D7500988AA0 /* NSPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D8EE611BF23D7500988AA0 /* NSPhotoController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		24D8EE5C1BF2236A00988AA0 /* sendDataFromMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sendDataFromMainController.h; sourceTree = "<group>"; };
 		24D8EE5D1BF223BB00988AA0 /* NSDataFromMVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataFromMVC.h; sourceTree = "<group>"; };
 		24D8EE5E1BF223BB00988AA0 /* NSDataFromMVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataFromMVC.m; sourceTree = "<group>"; };
+		24D8EE601BF23D7500988AA0 /* NSPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPhotoController.h; sourceTree = "<group>"; };
+		24D8EE611BF23D7500988AA0 /* NSPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPhotoController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +72,13 @@
 				241097561BF1F42200E4F33F /* NSMainViewController.m */,
 				24D8EE591BF2225500988AA0 /* NSShowController.h */,
 				24D8EE5A1BF2225500988AA0 /* NSShowController.m */,
+				24D8EE601BF23D7500988AA0 /* NSPhotoController.h */,
+				24D8EE611BF23D7500988AA0 /* NSPhotoController.m */,
 				241097411BF1F22300E4F33F /* AppDelegate.h */,
 				241097421BF1F22300E4F33F /* AppDelegate.m */,
-				24D8EE5C1BF2236A00988AA0 /* sendDataFromMainController.h */,
 				24D8EE5D1BF223BB00988AA0 /* NSDataFromMVC.h */,
 				24D8EE5E1BF223BB00988AA0 /* NSDataFromMVC.m */,
+				24D8EE5C1BF2236A00988AA0 /* sendDataFromMainController.h */,
 				241097471BF1F22300E4F33F /* Main.storyboard */,
 				2410974A1BF1F22300E4F33F /* Assets.xcassets */,
 				2410974C1BF1F22300E4F33F /* LaunchScreen.storyboard */,
@@ -163,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				241097431BF1F22300E4F33F /* AppDelegate.m in Sources */,
+				24D8EE621BF23D7500988AA0 /* NSPhotoController.m in Sources */,
 				241097571BF1F42200E4F33F /* NSMainViewController.m in Sources */,
 				24D8EE5F1BF223BB00988AA0 /* NSDataFromMVC.m in Sources */,
 				241097401BF1F22300E4F33F /* main.m in Sources */,
